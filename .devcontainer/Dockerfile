@@ -2,13 +2,18 @@
 FROM node:18
 
 # 設定工作目錄
-WORKDIR /app
+# WORKDIR /app
 
 # 複製 package.json 和 package-lock.json 到容器中
-COPY package.json package-lock.json ./
+# COPY package.json package-lock.json ./
+# COPY package.json /app/package.json
+# COPY package-lock.json /app/package-lock.json
+# COPY package*.json ./
 
 # 安裝必要的依賴（使用 npm ci）
-RUN npm ci
+# RUN npm ci
 
 # 複製整個目錄的文件到容器中（可以包括應用程式代碼等）
-COPY . .
+# COPY . .
+
+# CMD ["npm", "run", "dev"]
